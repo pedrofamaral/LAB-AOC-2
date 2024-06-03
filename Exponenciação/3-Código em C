@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int exp, x, resultado;
+
+    printf("Digite o valor de exp: ");
+    scanf("%d", &exp);
+
+    printf("Digite o valor de x: ");
+    scanf("%d", &x);
+
+    resultado = x << exp;
+
+    printf("%d\n", resultado);
+
+    return 0;
+}
