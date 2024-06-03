@@ -3,21 +3,21 @@
 .globl main
 
 main:  
-  li $a0, 3         # Carregar exp com valor 3
+ 	li $a0, 3         
 	
-  jal powerBase2    # Chamar a função powerBase2
+ 	jal powerBase2    
         
-  move $a1, $v0     # Mover o resultado para $a1 (para impressão)
-  li $v0, 1         # Syscall para imprimir inteiro
-  move $a0, $a1     # Mover o resultado para $a0 (argumento para syscall)
-  syscall 
-  j fim             # Pular para fim
+ 	move $a1, $v0     
+ 	li $v0, 1         
+ 	move $a0, $a1     
+ 	syscall 
+ 	j fim             
     
 powerBase2:
-  li $t0, 2         # Carregar o valor 2 em $t0
-  sllv $v0, $t0, $a0 # Deslocar $t0 (2) à esquerda pelo valor em $a0 bits (exp)
-  jr $ra            # Retornar para o chamador
+ 	li $t0, 2         
+ 	sllv $v0, $t0, $a0 
+ 	jr $ra            
 	
 fim:
-  li $v0, 10        # Syscall para terminar o programa
-  syscall
+ 	li $v0, 10        
+	syscall
